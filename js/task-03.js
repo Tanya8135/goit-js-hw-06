@@ -1,3 +1,5 @@
+const imgList = document.querySelector('.gallery');
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +14,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imgItemHtml = images.map(image =>
+  `<li> <img src="${image.url}" alt="${image.alt}"> </li>`).join('');
+
+imgList.insertAdjacentHTML('beforeend', imgItemHtml);
+
+imgList.style.display = "flex";
+imgList.style.flexWrap = "wrap";
+imgList.style.listStyle = "none";
+imgList.style.padding = "0";
+imgList.style.margin = "0";
+
+
+
+console.log(imgList);
+

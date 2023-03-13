@@ -1,0 +1,9 @@
+.gallery li {
+  flex-basis: calc(30% - 20px);
+  margin: 10px;
+}
+
+.gallery img {
+  max-width: 390px;
+  height: 300px;
+}
